@@ -11,3 +11,4 @@ flask-sqlalchemy==2.4.1
 flask_accepts==0.15.5
 configparser==3.5.0
 sqlalchemy-utils==0.33.9
+pyjwt
