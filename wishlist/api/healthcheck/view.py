@@ -5,7 +5,6 @@ from flask_restplus import Resource
 
 from wishlist.api import api
 from wishlist.api.healthcheck import get_first_record
-from wishlist.utils.validations import Validations
 
 log = logging.getLogger(__name__)
 ns = api.namespace('healthcheck', description='Communication test.')
@@ -24,6 +23,4 @@ class HealhCheck(Resource):
         """
         Healhcheck endpoint.
         """
-        token = request.headers.get('Authorization')
-        auth = Validations.validate_user_authorization(token)
         return get_first_record()
