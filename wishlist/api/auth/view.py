@@ -7,6 +7,7 @@ from flask_restplus import Resource
 from wishlist.api import api
 from wishlist.api.auth.controller import RegistrationManager
 from wishlist.api.auth.schema import LoginSchema, RegisterSchema
+from wishlist.utils.validations import Validations
 
 log = logging.getLogger(__name__)
 ns = api.namespace('register', description='Registration and login.')
