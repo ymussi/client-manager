@@ -94,5 +94,10 @@ You will receive an authorization token.
 
 - All endpoints require an authorization token.
 
+## Logs
+Records in the database can be tracked through the metabase dashboard on this link:
+
+- http://52.67.150.239:17030/public/dashboard/639bf2fc-1458-402a-94b8-78ba5db5b8fc
+
 
 Copyright (c) [2020] [Yuri Mussi]
