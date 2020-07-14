@@ -24,7 +24,15 @@ def config_db():
         return cfg
     else:
         raise Exception("There is no " + nome_ + " configuration available...")
-
+    
+def config_labs():
+    cfg = read_config()
+    nome_ = 'labs'
+    if nome_ in cfg:
+        cfg = cfg[nome_]
+        return cfg
+    else:
+        raise Exception("There is no " + nome_ + " configuration available...")
 
 def get_config(name):
     cfg = read_config()

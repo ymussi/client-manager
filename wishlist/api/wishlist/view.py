@@ -24,7 +24,7 @@ class Wishlist(Resource):
     @accepts(schema=WishlistSchema, api=api)
     def post(self):
         """
-        Register new wishlist
+        Register new wishlist. :product_id can be a registered product id in our base or a challenge API product id.
         """
         token = request.headers.get('Authorization')
         auth = Validations.validate_user_authorization(token)

@@ -16,7 +16,7 @@ class ProductEntity(Product):
         self.product['id'] = product.id
         if resp.get('status'):
             return {"status": "Product registered", "product": self.product}
-        return resp.get('msg')
+        return resp
     
     def update(self, id):
         resp = Products.update(self.product, id=id)

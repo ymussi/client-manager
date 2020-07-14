@@ -19,11 +19,12 @@ depends_on = None
 def upgrade():
     op.create_table('product',
                     sa.Column('id', sa.Integer(), primary_key=True, autoincrement=True),
+                    sa.Column('labs_id', sa.String(244), nullable=True, unique=True),
                     sa.Column('brand', sa.String(244), nullable=False),
                     sa.Column('title', sa.String(244), nullable=False, unique=True),
                     sa.Column('image', sa.String(2048), nullable=False),
                     sa.Column('price', sa.NUMERIC(), nullable=False),
-                    sa.Column('reviewScore', sa.String(244), nullable=False),
+                    sa.Column('reviewScore', sa.String(244), nullable=True),
                     sa.Column('created', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True),
                     sa.Column('updated', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True))
 

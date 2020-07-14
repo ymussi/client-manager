@@ -29,12 +29,13 @@ class Customers(Model):
 class Products(Model):
     __tablename__ = 'product'
     id = Column(Integer,unique=True, primary_key=True, autoincrement=True)
+    labs_id = Column(String(244), nullable=True, unique=True)
     brand = Column(String(244), nullable=False)
     title = Column(String(244), nullable=False)
     image = Column(String(2048), nullable=False)
     price = Column(NUMERIC, nullable=False)
     wishlist = relationship('Wishlists')
-    reviewScore = Column(String(244), nullable=False)
+    reviewScore = Column(String(244), nullable=True)
     created = Column(TIMESTAMP, server_default=func.now())
     updated = Column(TIMESTAMP, server_default=text('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))
     

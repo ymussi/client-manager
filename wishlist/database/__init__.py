@@ -70,7 +70,8 @@ class CRUDMixin:
     
     @classmethod
     def get_wishlist(cls, client_id):        
-        query = text("""select p.id as product_id, p.title as product_name, p.price as price from client_manager.wishlist as l
+        query = text("""select p.id as product_id, p.labs_id ,p.title, p.brand, p.price, p.image, p.reviewScore 
+                    from client_manager.wishlist as l
                     inner join client_manager.product as p on l.product_id = p.id
                     where l.client_id=:id""").bindparams(id=client_id)
         wishlist = session.execute(query)

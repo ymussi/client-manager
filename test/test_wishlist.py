@@ -29,12 +29,12 @@ class TestWishlist(unittest.TestCase):
     
     wishlist = {
         "client_id": 1,
-        "product_id": 1
+        "product_id": "1"
         }
     
     wishlist2 = {
         "client_id": 1,
-        "product_id": 2
+        "product_id": "2"
         }
         
     def setUp(self):
